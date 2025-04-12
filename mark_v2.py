@@ -148,10 +148,11 @@ def adjust_window_size(image):
 def main():
     global current_image, image_index, current_rectangles, window_width, window_height, original_image, scale_factor, saved_rectangles, crop_count, new_img
 
-    # 获取图片列表（假设图片在当前目录下的 "images" 文件夹中）
-    image_folder = "pic"  # 替换为你的图片文件夹路径
+    # 获取图片位置
+    image_folder = "pic"
     image_paths_ori = glob.glob(os.path.join(image_folder, "G*_*.JPEG"))
     image_paths = sorted(image_paths_ori, key=lambda x: int(os.path.basename(x).split('_')[0][1:]))
+    # image_paths.reverse()
 
     if not image_paths:
         print("未找到图片文件，请检查文件夹路径。")
