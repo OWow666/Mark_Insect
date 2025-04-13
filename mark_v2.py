@@ -181,7 +181,6 @@ def main():
                 # print(1)
         print(f"已保存所有标注区域：{image_path}")
 
-    # 退出
     cv2.destroyAllWindows()
     print("所有图片处理完成。")
 
