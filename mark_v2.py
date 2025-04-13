@@ -154,7 +154,7 @@ def main():
             image_index += 1
             continue
 
-        # 重置
+        # Reset
         current_rectangles = []
         saved_rectangles = []
         new_img = True
@@ -171,12 +171,12 @@ def main():
 
         while True:
             key = cv2.waitKey(1) & 0xFF
-            if key == ord('q'):  # 按 'q' 切换
+            if key == ord('q'):  # q切换
                 # save_cropped_rectangles(original_image, current_rectangles, image_path, output_dir)
                 # print(0)
                 image_index += 1
                 break
-            elif key == ord('s'):  # 按 's' 保存
+            elif key == ord('s'):  # s保存
                 save_cropped_rectangles(original_image, current_rectangles, image_path, output_dir)
                 # print(1)
         print(f"已保存所有标注区域：{image_path}")
